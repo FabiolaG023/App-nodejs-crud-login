@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='/favicon.ico')
+
+    title Inicio
+
+    link(
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha256-NJWeQ+bs82iAeoT5Ktmqbi3NXwxcHlfaVejzJI2dklU="
+      crossorigin="anonymous")
+    link(href='/navbar.css', rel='stylesheet')
+  body
+    nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+     .container-fluid
+      a(class="navbar-brand" href="/tienda/info") info
+      button(class="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" 
+          aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+      div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+        div(class="navbar-nav")
+          a(class="nav-link" href="/tienda/product") Productos 
+    main(role='main')
+      .container
+        h1.display-3 Panel de informacion
+    .container
+      p=`Bienvenid@ ${user.email}`
+      form(action='/sessions?_method=DELETE', method="post")
+        button.btn.btn-danger(type="submit", value="Cerrar seccion") Cerrar 

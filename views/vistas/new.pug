@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='/favicon.ico')
+    title Nuevo Producto
+    link(
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha256-NJWeQ+bs82iAeoT5Ktmqbi3NXwxcHlfaVejzJI2dklU="
+      crossorigin="anonymous")
+    link(href='/navbar.css', rel='stylesheet')
+  body
+    nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+        .container-fluid
+          a(class="navbar-brand" href="/tienda/info") info
+          button(class="navbar-toggler" type="button" 
+              data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" 
+              aria-label="Toggle navigation")
+            span(class="navbar-toggler-icon")
+          div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+            div(class="navbar-nav") 
+              a(class="nav-link" href="/tienda/product") Productos
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header
+            h4#myModalLabel.modal-title
+              | Nuevo Producto
+          // Modal Body
+          .modal-body
+            form(method="post" action='/tienda/product')
+              div.form-group
+                label(for='articulo') Articulo:
+                input#articulo.form-control( placeholder='articulo' name='articulo')
+                div.form-group
+                label(for='decripcion') Descripcion:
+                input#descripcion.form-control( placeholder='descripcion' name='descripcion')
+                div.form-group
+                label(for='precio') Precio:
+                input#precio.form-control( placeholder='precio' name='precio')
+              button.btn.btn-primary(type="submit",  value="Guardar") Guardar
+             
+            
+          // Modal Footer
+          .modal-footer
+

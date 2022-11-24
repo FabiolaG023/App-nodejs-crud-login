@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='/favicon.ico')
+    title Login 
+    link(
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha256-NJWeQ+bs82iAeoT5Ktmqbi3NXwxcHlfaVejzJI2dklU="
+      crossorigin="anonymous")
+    link(href='/navbar.css', rel='stylesheet')
+  body
+        nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+          .container-fluid
+            a(class="navbar-brand" href="/signup") Registrar
+        .modal-dialog
+            .modal-content
+              // Modal Header
+              .modal-header
+                h4#myModalLabel.modal-title
+                  | Login
+              // Modal Body
+              .modal-body
+                form(method="post" action='/sessions')
+                  div.form-group
+                    label(for='email') Email:
+                    input#email.form-control( placeholder='email' name='email')
+                  div.form-group
+                    label(for='password') Password:
+                    input#password.form-control( placeholder='password' name='password')
+                  button.btn.btn-dark(type="submit",  value="Iniciar sesión") Iniciar sesión
